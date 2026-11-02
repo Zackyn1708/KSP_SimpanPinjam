@@ -8,4 +8,8 @@
         p.AddEllipse(0, 0, PictureBox1.Width, PictureBox1.Height)
         PictureBox1.Region = New Region(p)
     End Sub
+
+    Private Sub lbljudul_Click(sender As Object, e As EventArgs) Handles lbljudul.Click
+
+    End Sub
 End Class

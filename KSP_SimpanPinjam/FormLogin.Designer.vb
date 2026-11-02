@@ -37,31 +37,35 @@ Partial Class FormLogin
         ' lbljudul
         ' 
         lbljudul.AutoSize = True
-        lbljudul.BackColor = Color.White
-        lbljudul.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lbljudul.ForeColor = Color.FromArgb(CByte(0), CByte(0), CByte(192))
+        lbljudul.BackColor = Color.Transparent
+        lbljudul.Font = New Font("Cooper Black", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lbljudul.ForeColor = SystemColors.Highlight
         lbljudul.LiveSetting = Automation.AutomationLiveSetting.Assertive
-        lbljudul.Location = New Point(175, 25)
+        lbljudul.Location = New Point(187, 43)
         lbljudul.Name = "lbljudul"
-        lbljudul.Size = New Size(408, 46)
+        lbljudul.Size = New Size(444, 39)
         lbljudul.TabIndex = 0
         lbljudul.Text = "Koperasi Simpan Pinjam"
         ' 
         ' lblUsername
         ' 
         lblUsername.AutoSize = True
+        lblUsername.BackColor = Color.Transparent
+        lblUsername.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblUsername.Location = New Point(221, 304)
         lblUsername.Name = "lblUsername"
-        lblUsername.Size = New Size(75, 20)
+        lblUsername.Size = New Size(80, 20)
         lblUsername.TabIndex = 1
         lblUsername.Text = "Username"
         ' 
         ' lblPassword
         ' 
         lblPassword.AutoSize = True
+        lblPassword.BackColor = Color.Transparent
+        lblPassword.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblPassword.Location = New Point(221, 368)
         lblPassword.Name = "lblPassword"
-        lblPassword.Size = New Size(70, 20)
+        lblPassword.Size = New Size(76, 20)
         lblPassword.TabIndex = 2
         lblPassword.Text = "Password"
         ' 
@@ -83,12 +87,14 @@ Partial Class FormLogin
         ' chkTampilkanPassword
         ' 
         chkTampilkanPassword.AutoSize = True
+        chkTampilkanPassword.BackColor = Color.Transparent
+        chkTampilkanPassword.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         chkTampilkanPassword.Location = New Point(221, 424)
         chkTampilkanPassword.Name = "chkTampilkanPassword"
-        chkTampilkanPassword.Size = New Size(163, 24)
+        chkTampilkanPassword.Size = New Size(174, 24)
         chkTampilkanPassword.TabIndex = 5
         chkTampilkanPassword.Text = "Tampilkan Password"
-        chkTampilkanPassword.UseVisualStyleBackColor = True
+        chkTampilkanPassword.UseVisualStyleBackColor = False
         ' 
         ' btnLogin
         ' 
@@ -107,10 +113,10 @@ Partial Class FormLogin
         ' 
         PictureBox1.BackColor = Color.Transparent
         PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), Image)
-        PictureBox1.Location = New Point(270, 90)
+        PictureBox1.Location = New Point(259, 119)
         PictureBox1.Name = "PictureBox1"
-        PictureBox1.Size = New Size(200, 200)
-        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.Size = New Size(234, 159)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 7
         PictureBox1.TabStop = False
         ' 
@@ -118,6 +124,8 @@ Partial Class FormLogin
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.CadetBlue
+        BackgroundImage = My.Resources.Resources.Untitled_design__1_
         ClientSize = New Size(982, 633)
         Controls.Add(PictureBox1)
         Controls.Add(btnLogin)

@@ -23,6 +23,12 @@ Partial Class FormDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDashboard))
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         PanelSidebar = New Panel()
         btnLaporan = New Button()
         btnTransaksi = New Button()
@@ -32,15 +38,41 @@ Partial Class FormDashboard
         btnDashboard = New Button()
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
-        GroupBox3 = New GroupBox()
-        GroupBox2 = New GroupBox()
-        GroupBox1 = New GroupBox()
+        FlowLayoutPanel3 = New FlowLayoutPanel()
         Label2 = New Label()
         Label1 = New Label()
         Button1 = New Button()
+        FlowLayoutPanel1 = New FlowLayoutPanel()
+        Label3 = New Label()
+        FlowLayoutPanel2 = New FlowLayoutPanel()
+        FlowLayoutPanel4 = New FlowLayoutPanel()
+        Panel2 = New Panel()
+        Label8 = New Label()
+        Label4 = New Label()
+        Panel3 = New Panel()
+        Label5 = New Label()
+        Panel4 = New Panel()
+        Label6 = New Label()
+        lblAngkaAnggota = New Label()
+        lblAngkaSimpanan = New Label()
+        lblAngkaPinjaman = New Label()
+        Panel5 = New Panel()
+        Panel6 = New Panel()
+        Chart1 = New DataVisualization.Charting.Chart()
+        Label7 = New Label()
+        Chart2 = New DataVisualization.Charting.Chart()
+        Label9 = New Label()
         PanelSidebar.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
+        FlowLayoutPanel1.SuspendLayout()
+        Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
+        Panel4.SuspendLayout()
+        Panel5.SuspendLayout()
+        Panel6.SuspendLayout()
+        CType(Chart1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(Chart2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' PanelSidebar
@@ -161,50 +193,29 @@ Partial Class FormDashboard
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(18), CByte(125), CByte(135))
-        Panel1.Controls.Add(GroupBox3)
-        Panel1.Controls.Add(GroupBox2)
-        Panel1.Controls.Add(GroupBox1)
+        Panel1.Controls.Add(FlowLayoutPanel3)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
         Panel1.Controls.Add(Button1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(255, 0)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(927, 275)
+        Panel1.Size = New Size(927, 171)
         Panel1.TabIndex = 1
         ' 
-        ' GroupBox3
+        ' FlowLayoutPanel3
         ' 
-        GroupBox3.Location = New Point(612, 188)
-        GroupBox3.Name = "GroupBox3"
-        GroupBox3.Size = New Size(250, 156)
-        GroupBox3.TabIndex = 3
-        GroupBox3.TabStop = False
-        GroupBox3.Text = "Total Anggota"
-        ' 
-        ' GroupBox2
-        ' 
-        GroupBox2.Location = New Point(314, 188)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(250, 156)
-        GroupBox2.TabIndex = 3
-        GroupBox2.TabStop = False
-        GroupBox2.Text = "Total Anggota"
-        ' 
-        ' GroupBox1
-        ' 
-        GroupBox1.Location = New Point(20, 188)
-        GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(250, 156)
-        GroupBox1.TabIndex = 2
-        GroupBox1.TabStop = False
-        GroupBox1.Text = "Total Anggota"
+        FlowLayoutPanel3.BackColor = Color.White
+        FlowLayoutPanel3.Location = New Point(623, 177)
+        FlowLayoutPanel3.Name = "FlowLayoutPanel3"
+        FlowLayoutPanel3.Size = New Size(220, 138)
+        FlowLayoutPanel3.TabIndex = 3
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Century", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(15, 141)
+        Label2.Location = New Point(16, 120)
         Label2.Name = "Label2"
         Label2.Size = New Size(562, 28)
         Label2.TabIndex = 9
@@ -215,7 +226,7 @@ Partial Class FormDashboard
         Label1.AutoSize = True
         Label1.Font = New Font("Cooper Black", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
-        Label1.Location = New Point(15, 106)
+        Label1.Location = New Point(16, 85)
         Label1.Name = "Label1"
         Label1.Size = New Size(255, 35)
         Label1.TabIndex = 8
@@ -235,14 +246,243 @@ Partial Class FormDashboard
         Button1.TextImageRelation = TextImageRelation.ImageBeforeText
         Button1.UseVisualStyleBackColor = True
         ' 
+        ' FlowLayoutPanel1
+        ' 
+        FlowLayoutPanel1.Anchor = AnchorStyles.None
+        FlowLayoutPanel1.BackColor = Color.White
+        FlowLayoutPanel1.Controls.Add(Label3)
+        FlowLayoutPanel1.Location = New Point(281, 177)
+        FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        FlowLayoutPanel1.Size = New Size(0, 0)
+        FlowLayoutPanel1.TabIndex = 2
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.ForeColor = Color.Black
+        Label3.Location = New Point(3, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(131, 21)
+        Label3.TabIndex = 0
+        Label3.Text = "Total Anggota"
+        ' 
+        ' FlowLayoutPanel2
+        ' 
+        FlowLayoutPanel2.BackColor = Color.White
+        FlowLayoutPanel2.Location = New Point(576, 177)
+        FlowLayoutPanel2.Name = "FlowLayoutPanel2"
+        FlowLayoutPanel2.Size = New Size(0, 0)
+        FlowLayoutPanel2.TabIndex = 3
+        ' 
+        ' FlowLayoutPanel4
+        ' 
+        FlowLayoutPanel4.BackColor = Color.White
+        FlowLayoutPanel4.Location = New Point(878, 177)
+        FlowLayoutPanel4.Name = "FlowLayoutPanel4"
+        FlowLayoutPanel4.Size = New Size(0, 0)
+        FlowLayoutPanel4.TabIndex = 3
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.White
+        Panel2.Controls.Add(lblAngkaAnggota)
+        Panel2.Controls.Add(Label8)
+        Panel2.Controls.Add(Label4)
+        Panel2.Location = New Point(271, 190)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(267, 138)
+        Panel2.TabIndex = 4
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(22, 64)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(65, 21)
+        Label8.TabIndex = 1
+        Label8.Text = "Label8"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label4.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label4.ImageAlign = ContentAlignment.BottomRight
+        Label4.Location = New Point(13, 20)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(132, 20)
+        Label4.TabIndex = 0
+        Label4.Text = "Total Anggota"
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.White
+        Panel3.Controls.Add(lblAngkaSimpanan)
+        Panel3.Controls.Add(Label5)
+        Panel3.Location = New Point(566, 190)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(267, 138)
+        Panel3.TabIndex = 5
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label5.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label5.Location = New Point(24, 20)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(145, 20)
+        Label5.TabIndex = 0
+        Label5.Text = "Total Simpanan"
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.White
+        Panel4.Controls.Add(lblAngkaPinjaman)
+        Panel4.Controls.Add(Label6)
+        Panel4.Location = New Point(861, 190)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(267, 138)
+        Panel4.TabIndex = 5
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label6.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label6.Location = New Point(17, 20)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(141, 20)
+        Label6.TabIndex = 0
+        Label6.Text = "Total Pinjaman"
+        Label6.TextAlign = ContentAlignment.TopCenter
+        ' 
+        ' lblAngkaAnggota
+        ' 
+        lblAngkaAnggota.AutoSize = True
+        lblAngkaAnggota.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
+        lblAngkaAnggota.ForeColor = Color.DarkGoldenrod
+        lblAngkaAnggota.Location = New Point(22, 64)
+        lblAngkaAnggota.Name = "lblAngkaAnggota"
+        lblAngkaAnggota.Size = New Size(40, 46)
+        lblAngkaAnggota.TabIndex = 2
+        lblAngkaAnggota.Text = "4"
+        ' 
+        ' lblAngkaSimpanan
+        ' 
+        lblAngkaSimpanan.AutoSize = True
+        lblAngkaSimpanan.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
+        lblAngkaSimpanan.ForeColor = Color.DarkGoldenrod
+        lblAngkaSimpanan.Location = New Point(10, 72)
+        lblAngkaSimpanan.Name = "lblAngkaSimpanan"
+        lblAngkaSimpanan.Size = New Size(210, 46)
+        lblAngkaSimpanan.TabIndex = 3
+        lblAngkaSimpanan.Text = "Rp. 400.000"
+        ' 
+        ' lblAngkaPinjaman
+        ' 
+        lblAngkaPinjaman.AutoSize = True
+        lblAngkaPinjaman.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
+        lblAngkaPinjaman.ForeColor = Color.DarkGoldenrod
+        lblAngkaPinjaman.Location = New Point(27, 71)
+        lblAngkaPinjaman.Name = "lblAngkaPinjaman"
+        lblAngkaPinjaman.Size = New Size(101, 46)
+        lblAngkaPinjaman.TabIndex = 4
+        lblAngkaPinjaman.Text = "Rp. 0"
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.White
+        Panel5.Controls.Add(Label9)
+        Panel5.Controls.Add(Chart2)
+        Panel5.Location = New Point(271, 361)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(399, 265)
+        Panel5.TabIndex = 5
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BackColor = Color.White
+        Panel6.Controls.Add(Label7)
+        Panel6.Controls.Add(Chart1)
+        Panel6.Location = New Point(731, 361)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(404, 265)
+        Panel6.TabIndex = 6
+        ' 
+        ' Chart1
+        ' 
+        Chart1.BorderlineDashStyle = DataVisualization.Charting.ChartDashStyle.Solid
+        ChartArea2.Name = "ChartArea1"
+        Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Name = "Legend1"
+        Chart1.Legends.Add(Legend2)
+        Chart1.Location = New Point(65, 12)
+        Chart1.Name = "Chart1"
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Pie
+        Series2.Legend = "Legend1"
+        Series2.Name = "Series1"
+        Chart1.Series.Add(Series2)
+        Chart1.Size = New Size(284, 250)
+        Chart1.TabIndex = 0
+        Chart1.Text = "Pemasukan Bulan Ini"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label7.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label7.Location = New Point(14, 12)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(192, 20)
+        Label7.TabIndex = 4
+        Label7.Text = "Pemasukan Bulan Ini"
+        ' 
+        ' Chart2
+        ' 
+        Chart2.BorderlineDashStyle = DataVisualization.Charting.ChartDashStyle.Solid
+        ChartArea1.Name = "ChartArea1"
+        Chart2.ChartAreas.Add(ChartArea1)
+        Legend1.Name = "Legend1"
+        Chart2.Legends.Add(Legend1)
+        Chart2.Location = New Point(3, 58)
+        Chart2.Name = "Chart2"
+        Series1.ChartArea = "ChartArea1"
+        Series1.Legend = "Legend1"
+        Series1.Name = "Series1"
+        Chart2.Series.Add(Series1)
+        Chart2.Size = New Size(393, 199)
+        Chart2.TabIndex = 1
+        Chart2.Text = "Pemasukan Bulan Ini"
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label9.Location = New Point(35, 15)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(141, 20)
+        Label9.TabIndex = 5
+        Label9.Text = "Total Pinjaman"
+        ' 
         ' FormDashboard
         ' 
         AutoScaleDimensions = New SizeF(10.0F, 21.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(240), CByte(244), CByte(248))
         ClientSize = New Size(1182, 653)
+        Controls.Add(Panel6)
+        Controls.Add(Panel5)
+        Controls.Add(Panel4)
+        Controls.Add(Panel3)
+        Controls.Add(Panel2)
+        Controls.Add(FlowLayoutPanel4)
+        Controls.Add(FlowLayoutPanel2)
         Controls.Add(Panel1)
         Controls.Add(PanelSidebar)
+        Controls.Add(FlowLayoutPanel1)
         Font = New Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ForeColor = SystemColors.Window
         FormBorderStyle = FormBorderStyle.FixedSingle
@@ -250,11 +490,25 @@ Partial Class FormDashboard
         MaximizeBox = False
         Name = "FormDashboard"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Dashboard Utama"
+        Text = "x"
         PanelSidebar.ResumeLayout(False)
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
+        FlowLayoutPanel1.ResumeLayout(False)
+        FlowLayoutPanel1.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
+        Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
+        CType(Chart1, ComponentModel.ISupportInitialize).EndInit()
+        CType(Chart2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -272,7 +526,25 @@ Partial Class FormDashboard
     Friend WithEvents Button1 As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
+    Friend WithEvents FlowLayoutPanel3 As FlowLayoutPanel
+    Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
+    Friend WithEvents FlowLayoutPanel4 As FlowLayoutPanel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents lblAngkaAnggota As Label
+    Friend WithEvents lblAngkaSimpanan As Label
+    Friend WithEvents lblAngkaPinjaman As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
+    Friend WithEvents Label9 As Label
 End Class

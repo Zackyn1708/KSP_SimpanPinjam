@@ -26,27 +26,27 @@ Partial Class FormPembayaranAngsuran
         Label1 = New Label()
         Label2 = New Label()
         GroupBox1 = New GroupBox()
-        Label3 = New Label()
-        Label4 = New Label()
-        TipePokok = New RadioButton()
-        TipeBunga = New RadioButton()
-        TipeDenda = New RadioButton()
-        Label5 = New Label()
-        Label6 = New Label()
-        Label7 = New Label()
+        DateTimePicker1 = New DateTimePicker()
+        RadioButton2 = New RadioButton()
         JumlahBayar = New TextBox()
         RadioButton1 = New RadioButton()
-        RadioButton2 = New RadioButton()
-        DateTimePicker1 = New DateTimePicker()
+        Label7 = New Label()
+        Label6 = New Label()
+        Label5 = New Label()
+        TipeDenda = New RadioButton()
+        TipeBunga = New RadioButton()
+        TipePokok = New RadioButton()
+        Label4 = New Label()
+        Label3 = New Label()
         ComboBox1 = New ComboBox()
         DataGridView1 = New DataGridView()
-        BackgroundWorker1 = New ComponentModel.BackgroundWorker()
-        Label8 = New Label()
         KontrakID = New DataGridViewTextBoxColumn()
         KontrakStatus = New DataGridViewTextBoxColumn()
         KontrakMB = New DataGridViewTextBoxColumn()
         KontrakJT = New DataGridViewTextBoxColumn()
         KontrakAnggota = New DataGridViewTextBoxColumn()
+        BackgroundWorker1 = New ComponentModel.BackgroundWorker()
+        Label8 = New Label()
         btnsubmit = New Button()
         GroupBox1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
@@ -56,11 +56,11 @@ Partial Class FormPembayaranAngsuran
         ' 
         Label1.BackColor = Color.Teal
         Label1.Dock = DockStyle.Top
-        Label1.Font = New Font("Segoe UI", 24.2F, FontStyle.Bold)
+        Label1.Font = New Font("Cooper Black", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(0, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(1102, 85)
+        Label1.Size = New Size(1237, 85)
         Label1.TabIndex = 0
         Label1.Text = "Pembayaran Angsuran"
         Label1.TextAlign = ContentAlignment.MiddleLeft
@@ -93,88 +93,29 @@ Partial Class FormPembayaranAngsuran
         GroupBox1.Font = New Font("Segoe UI", 10F)
         GroupBox1.Location = New Point(14, 185)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(1076, 216)
+        GroupBox1.Size = New Size(1211, 216)
         GroupBox1.TabIndex = 3
         GroupBox1.TabStop = False
         GroupBox1.Text = "Angsuran"
         ' 
-        ' Label3
+        ' DateTimePicker1
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 13.8F)
-        Label3.Location = New Point(14, 142)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(146, 31)
-        Label3.TabIndex = 4
-        Label3.Text = "Member Info"
+        DateTimePicker1.Checked = False
+        DateTimePicker1.Format = DateTimePickerFormat.Short
+        DateTimePicker1.Location = New Point(163, 163)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(270, 30)
+        DateTimePicker1.TabIndex = 10
         ' 
-        ' Label4
+        ' RadioButton2
         ' 
-        Label4.AutoSize = True
-        Label4.Location = New Point(15, 38)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(42, 23)
-        Label4.TabIndex = 0
-        Label4.Text = "Tipe"
-        ' 
-        ' TipePokok
-        ' 
-        TipePokok.AutoSize = True
-        TipePokok.Checked = True
-        TipePokok.Location = New Point(165, 36)
-        TipePokok.Name = "TipePokok"
-        TipePokok.Size = New Size(76, 27)
-        TipePokok.TabIndex = 1
-        TipePokok.TabStop = True
-        TipePokok.Text = "Pokok"
-        TipePokok.UseVisualStyleBackColor = True
-        ' 
-        ' TipeBunga
-        ' 
-        TipeBunga.AutoSize = True
-        TipeBunga.Location = New Point(285, 36)
-        TipeBunga.Name = "TipeBunga"
-        TipeBunga.Size = New Size(80, 27)
-        TipeBunga.TabIndex = 2
-        TipeBunga.Text = "Bunga"
-        TipeBunga.UseVisualStyleBackColor = True
-        ' 
-        ' TipeDenda
-        ' 
-        TipeDenda.AutoSize = True
-        TipeDenda.Location = New Point(422, 36)
-        TipeDenda.Name = "TipeDenda"
-        TipeDenda.Size = New Size(81, 27)
-        TipeDenda.TabIndex = 3
-        TipeDenda.Text = "Denda"
-        TipeDenda.UseVisualStyleBackColor = True
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.Location = New Point(15, 84)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(111, 23)
-        Label5.TabIndex = 4
-        Label5.Text = "Jumlah Bayar"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.Location = New Point(15, 128)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(116, 23)
-        Label6.TabIndex = 5
-        Label6.Text = "Metode Bayar"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.Location = New Point(15, 168)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(116, 23)
-        Label7.TabIndex = 6
-        Label7.Text = "Tanggal Bayar"
+        RadioButton2.AutoSize = True
+        RadioButton2.Location = New Point(253, 126)
+        RadioButton2.Name = "RadioButton2"
+        RadioButton2.Size = New Size(91, 27)
+        RadioButton2.TabIndex = 9
+        RadioButton2.Text = "Transfer"
+        RadioButton2.UseVisualStyleBackColor = True
         ' 
         ' JumlahBayar
         ' 
@@ -195,23 +136,83 @@ Partial Class FormPembayaranAngsuran
         RadioButton1.Text = "Tunai"
         RadioButton1.UseVisualStyleBackColor = True
         ' 
-        ' RadioButton2
+        ' Label7
         ' 
-        RadioButton2.AutoSize = True
-        RadioButton2.Location = New Point(253, 126)
-        RadioButton2.Name = "RadioButton2"
-        RadioButton2.Size = New Size(91, 27)
-        RadioButton2.TabIndex = 9
-        RadioButton2.Text = "Transfer"
-        RadioButton2.UseVisualStyleBackColor = True
+        Label7.AutoSize = True
+        Label7.Location = New Point(15, 168)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(116, 23)
+        Label7.TabIndex = 6
+        Label7.Text = "Tanggal Bayar"
         ' 
-        ' DateTimePicker1
+        ' Label6
         ' 
-        DateTimePicker1.Format = DateTimePickerFormat.Short
-        DateTimePicker1.Location = New Point(163, 163)
-        DateTimePicker1.Name = "DateTimePicker1"
-        DateTimePicker1.Size = New Size(270, 30)
-        DateTimePicker1.TabIndex = 10
+        Label6.AutoSize = True
+        Label6.Location = New Point(15, 128)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(116, 23)
+        Label6.TabIndex = 5
+        Label6.Text = "Metode Bayar"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(15, 84)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(111, 23)
+        Label5.TabIndex = 4
+        Label5.Text = "Jumlah Bayar"
+        ' 
+        ' TipeDenda
+        ' 
+        TipeDenda.AutoSize = True
+        TipeDenda.Location = New Point(422, 36)
+        TipeDenda.Name = "TipeDenda"
+        TipeDenda.Size = New Size(81, 27)
+        TipeDenda.TabIndex = 3
+        TipeDenda.Text = "Denda"
+        TipeDenda.UseVisualStyleBackColor = True
+        ' 
+        ' TipeBunga
+        ' 
+        TipeBunga.AutoSize = True
+        TipeBunga.Location = New Point(285, 36)
+        TipeBunga.Name = "TipeBunga"
+        TipeBunga.Size = New Size(80, 27)
+        TipeBunga.TabIndex = 2
+        TipeBunga.Text = "Bunga"
+        TipeBunga.UseVisualStyleBackColor = True
+        ' 
+        ' TipePokok
+        ' 
+        TipePokok.AutoSize = True
+        TipePokok.Checked = True
+        TipePokok.Location = New Point(165, 36)
+        TipePokok.Name = "TipePokok"
+        TipePokok.Size = New Size(76, 27)
+        TipePokok.TabIndex = 1
+        TipePokok.TabStop = True
+        TipePokok.Text = "Pokok"
+        TipePokok.UseVisualStyleBackColor = True
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(15, 38)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(42, 23)
+        Label4.TabIndex = 0
+        Label4.Text = "Tipe"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 13.8F)
+        Label3.Location = New Point(14, 142)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(146, 31)
+        Label3.TabIndex = 4
+        Label3.Text = "Member Info"
         ' 
         ' ComboBox1
         ' 
@@ -245,19 +246,6 @@ Partial Class FormPembayaranAngsuran
         DataGridView1.Size = New Size(1076, 216)
         DataGridView1.TabIndex = 6
         ' 
-        ' BackgroundWorker1
-        ' 
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 13.8F)
-        Label8.Location = New Point(177, 142)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(139, 31)
-        Label8.TabIndex = 7
-        Label8.Text = "Bapak/Ibu ..."
-        ' 
         ' KontrakID
         ' 
         KontrakID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells
@@ -265,7 +253,7 @@ Partial Class FormPembayaranAngsuran
         KontrakID.MinimumWidth = 6
         KontrakID.Name = "KontrakID"
         KontrakID.ReadOnly = True
-        KontrakID.Width = 116
+        KontrakID.Width = 126
         ' 
         ' KontrakStatus
         ' 
@@ -295,14 +283,27 @@ Partial Class FormPembayaranAngsuran
         KontrakAnggota.Name = "KontrakAnggota"
         KontrakAnggota.ReadOnly = True
         ' 
+        ' BackgroundWorker1
+        ' 
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Font = New Font("Segoe UI", 13.8F)
+        Label8.Location = New Point(177, 142)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(139, 31)
+        Label8.TabIndex = 7
+        Label8.Text = "Bapak/Ibu ..."
+        ' 
         ' btnsubmit
         ' 
         btnsubmit.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnsubmit.BackColor = Color.Teal
         btnsubmit.FlatStyle = FlatStyle.Flat
-        btnsubmit.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        btnsubmit.Font = New Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnsubmit.ForeColor = Color.White
-        btnsubmit.Location = New Point(920, 642)
+        btnsubmit.Location = New Point(1055, 740)
         btnsubmit.Name = "btnsubmit"
         btnsubmit.Size = New Size(170, 55)
         btnsubmit.TabIndex = 8
@@ -314,7 +315,7 @@ Partial Class FormPembayaranAngsuran
         AutoScaleDimensions = New SizeF(9F, 23F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.AliceBlue
-        ClientSize = New Size(1102, 703)
+        ClientSize = New Size(1237, 801)
         Controls.Add(btnsubmit)
         Controls.Add(Label8)
         Controls.Add(DataGridView1)
