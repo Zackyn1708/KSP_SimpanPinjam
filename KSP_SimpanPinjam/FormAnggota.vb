@@ -1,10 +1,5 @@
-﻿Public Class FormAnggota
-
-    Private Sub btnKembali_Click(sender As Object, e As EventArgs) Handles btnKembali.Click
-
-    End Sub
-
-    Private Sub lblJudulAnggota_Click(sender As Object, e As EventArgs) Handles lblJudulAnggota.Click
+﻿Public Class Form2
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
 
     End Sub
 End Class

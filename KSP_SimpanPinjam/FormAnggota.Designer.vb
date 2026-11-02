@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormAnggota
+Partial Class Form2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,240 +22,279 @@ Partial Class FormAnggota
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        lblJudulAnggota = New Label()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Panel1 = New Panel()
+        Label1 = New Label()
+        Panel2 = New Panel()
+        btnExport = New Button()
+        btnCetakTop = New Button()
+        btnTambahTop = New Button()
+        btnCari = New Button()
+        cmbFilter = New ComboBox()
+        lblFilter = New Label()
+        txtSearch = New TextBox()
         dgvAnggota = New DataGridView()
-        btnTambah = New Button()
-        btnUbah = New Button()
-        btnHapus = New Button()
-        btnRefresh = New Button()
+        colFoto = New DataGridViewTextBoxColumn()
+        colID = New DataGridViewTextBoxColumn()
+        colNama = New DataGridViewTextBoxColumn()
+        colAlamat = New DataGridViewTextBoxColumn()
+        colStatus = New DataGridViewTextBoxColumn()
+        Panel3 = New Panel()
+        Button1 = New Button()
+        Button2 = New Button()
         btnKembali = New Button()
-        pnlSidebar = New Panel()
-        btnPembayaran = New Button()
-        btnAngsuran = New Button()
-        btnPinjaman = New Button()
-        btnSimpanan = New Button()
-        btnAnggota = New Button()
-        btnDashboard = New Button()
-        lblJudul = New Label()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
         CType(dgvAnggota, ComponentModel.ISupportInitialize).BeginInit()
-        pnlSidebar.SuspendLayout()
+        Panel3.SuspendLayout()
         SuspendLayout()
         ' 
-        ' lblJudulAnggota
+        ' Panel1
         ' 
-        lblJudulAnggota.AutoSize = True
-        lblJudulAnggota.Font = New Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblJudulAnggota.ForeColor = Color.MidnightBlue
-        lblJudulAnggota.Location = New Point(344, 28)
-        lblJudulAnggota.Name = "lblJudulAnggota"
-        lblJudulAnggota.Size = New Size(405, 46)
-        lblJudulAnggota.TabIndex = 0
-        lblJudulAnggota.Text = "Data Anggota Koperasi\"
+        Panel1.BackColor = Color.FromArgb(CByte(18), CByte(125), CByte(135))
+        Panel1.Controls.Add(Label1)
+        Panel1.Dock = DockStyle.Top
+        Panel1.Location = New Point(0, 0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(982, 105)
+        Panel1.TabIndex = 0
+        ' 
+        ' Label1
+        ' 
+        Label1.Dock = DockStyle.Fill
+        Label1.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold)
+        Label1.ForeColor = Color.White
+        Label1.Location = New Point(0, 0)
+        Label1.Name = "Label1"
+        Label1.Padding = New Padding(15, 0, 0, 0)
+        Label1.Size = New Size(982, 105)
+        Label1.TabIndex = 0
+        Label1.Text = "DATA ANGGOTA"
+        Label1.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.WhiteSmoke
+        Panel2.Controls.Add(btnExport)
+        Panel2.Controls.Add(btnCetakTop)
+        Panel2.Controls.Add(btnTambahTop)
+        Panel2.Controls.Add(btnCari)
+        Panel2.Controls.Add(cmbFilter)
+        Panel2.Controls.Add(lblFilter)
+        Panel2.Controls.Add(txtSearch)
+        Panel2.Dock = DockStyle.Top
+        Panel2.Location = New Point(0, 105)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(982, 81)
+        Panel2.TabIndex = 1
+        ' 
+        ' btnExport
+        ' 
+        btnExport.Location = New Point(870, 14)
+        btnExport.Name = "btnExport"
+        btnExport.Size = New Size(94, 29)
+        btnExport.TabIndex = 6
+        btnExport.Text = "Export Excel"
+        btnExport.UseVisualStyleBackColor = True
+        ' 
+        ' btnCetakTop
+        ' 
+        btnCetakTop.Location = New Point(770, 14)
+        btnCetakTop.Name = "btnCetakTop"
+        btnCetakTop.Size = New Size(94, 29)
+        btnCetakTop.TabIndex = 5
+        btnCetakTop.Text = "Cetak"
+        btnCetakTop.UseVisualStyleBackColor = True
+        ' 
+        ' btnTambahTop
+        ' 
+        btnTambahTop.Location = New Point(670, 14)
+        btnTambahTop.Name = "btnTambahTop"
+        btnTambahTop.Size = New Size(94, 29)
+        btnTambahTop.TabIndex = 4
+        btnTambahTop.Text = "Tambah"
+        btnTambahTop.UseVisualStyleBackColor = True
+        ' 
+        ' btnCari
+        ' 
+        btnCari.Location = New Point(570, 14)
+        btnCari.Name = "btnCari"
+        btnCari.Size = New Size(94, 29)
+        btnCari.TabIndex = 3
+        btnCari.Text = "Cari"
+        btnCari.UseVisualStyleBackColor = True
+        ' 
+        ' cmbFilter
+        ' 
+        cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList
+        cmbFilter.FormattingEnabled = True
+        cmbFilter.Location = New Point(384, 17)
+        cmbFilter.Name = "cmbFilter"
+        cmbFilter.Size = New Size(150, 28)
+        cmbFilter.TabIndex = 2
+        ' 
+        ' lblFilter
+        ' 
+        lblFilter.AutoSize = True
+        lblFilter.Location = New Point(333, 20)
+        lblFilter.Name = "lblFilter"
+        lblFilter.Size = New Size(45, 20)
+        lblFilter.TabIndex = 1
+        lblFilter.Text = "Filter:"
+        ' 
+        ' txtSearch
+        ' 
+        txtSearch.Location = New Point(12, 16)
+        txtSearch.Name = "txtSearch"
+        txtSearch.Size = New Size(300, 27)
+        txtSearch.TabIndex = 0
         ' 
         ' dgvAnggota
         ' 
         dgvAnggota.AllowUserToAddRows = False
+        dgvAnggota.AllowUserToDeleteRows = False
+        dgvAnggota.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         dgvAnggota.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvAnggota.BackgroundColor = Color.White
-        dgvAnggota.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvAnggota.Location = New Point(344, 150)
+        dgvAnggota.BorderStyle = BorderStyle.Fixed3D
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = Color.Gainsboro
+        DataGridViewCellStyle2.Font = New Font("Segoe UI", 11F)
+        DataGridViewCellStyle2.ForeColor = Color.Black
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(8), CByte(120), CByte(201))
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
+        dgvAnggota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        dgvAnggota.ColumnHeadersHeight = 45
+        dgvAnggota.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        dgvAnggota.Columns.AddRange(New DataGridViewColumn() {colFoto, colID, colNama, colAlamat, colStatus})
+        dgvAnggota.EnableHeadersVisualStyles = False
+        dgvAnggota.Location = New Point(12, 192)
         dgvAnggota.MultiSelect = False
         dgvAnggota.Name = "dgvAnggota"
         dgvAnggota.ReadOnly = True
         dgvAnggota.RowHeadersWidth = 51
+        dgvAnggota.RowTemplate.Height = 55
         dgvAnggota.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvAnggota.Size = New Size(686, 400)
-        dgvAnggota.TabIndex = 1
+        dgvAnggota.Size = New Size(958, 346)
+        dgvAnggota.TabIndex = 2
         ' 
-        ' btnTambah
+        ' colFoto
         ' 
-        btnTambah.Location = New Point(344, 95)
-        btnTambah.Name = "btnTambah"
-        btnTambah.Size = New Size(100, 35)
-        btnTambah.TabIndex = 2
-        btnTambah.Text = "Tambah"
-        btnTambah.UseVisualStyleBackColor = True
+        colFoto.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader
+        colFoto.HeaderText = "Foto Anggota"
+        colFoto.MinimumWidth = 6
+        colFoto.Name = "colFoto"
+        colFoto.ReadOnly = True
+        colFoto.Width = 155
         ' 
-        ' btnUbah
+        ' colID
         ' 
-        btnUbah.Location = New Point(450, 95)
-        btnUbah.Name = "btnUbah"
-        btnUbah.Size = New Size(100, 35)
-        btnUbah.TabIndex = 3
-        btnUbah.Text = "Ubah"
-        btnUbah.UseVisualStyleBackColor = True
+        colID.HeaderText = "ID"
+        colID.MinimumWidth = 6
+        colID.Name = "colID"
+        colID.ReadOnly = True
         ' 
-        ' btnHapus
+        ' colNama
         ' 
-        btnHapus.Location = New Point(556, 95)
-        btnHapus.Name = "btnHapus"
-        btnHapus.Size = New Size(100, 35)
-        btnHapus.TabIndex = 4
-        btnHapus.Text = "Hapus"
-        btnHapus.UseVisualStyleBackColor = True
+        colNama.HeaderText = "Nama"
+        colNama.MinimumWidth = 6
+        colNama.Name = "colNama"
+        colNama.ReadOnly = True
         ' 
-        ' btnRefresh
+        ' colAlamat
         ' 
-        btnRefresh.Location = New Point(662, 95)
-        btnRefresh.Name = "btnRefresh"
-        btnRefresh.Size = New Size(100, 35)
-        btnRefresh.TabIndex = 5
-        btnRefresh.Text = "Refresh"
-        btnRefresh.UseVisualStyleBackColor = True
+        colAlamat.HeaderText = "Alamat"
+        colAlamat.MinimumWidth = 6
+        colAlamat.Name = "colAlamat"
+        colAlamat.ReadOnly = True
+        ' 
+        ' colStatus
+        ' 
+        colStatus.HeaderText = "Status"
+        colStatus.MinimumWidth = 6
+        colStatus.Name = "colStatus"
+        colStatus.ReadOnly = True
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.WhiteSmoke
+        Panel3.Controls.Add(btnKembali)
+        Panel3.Controls.Add(Button1)
+        Panel3.Controls.Add(Button2)
+        Panel3.Dock = DockStyle.Bottom
+        Panel3.Location = New Point(0, 528)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(982, 75)
+        Panel3.TabIndex = 3
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(876, 16)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(94, 29)
+        Button1.TabIndex = 8
+        Button1.Text = "Cetak"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Location = New Point(776, 16)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(94, 29)
+        Button2.TabIndex = 7
+        Button2.Text = "Tambah"
+        Button2.UseVisualStyleBackColor = True
         ' 
         ' btnKembali
         ' 
-        btnKembali.Location = New Point(930, 95)
+        btnKembali.AutoSize = True
+        btnKembali.Location = New Point(22, 16)
         btnKembali.Name = "btnKembali"
-        btnKembali.Size = New Size(100, 35)
-        btnKembali.TabIndex = 6
-        btnKembali.Text = "Back"
+        btnKembali.Size = New Size(152, 30)
+        btnKembali.TabIndex = 9
+        btnKembali.Text = "Kembali ke Beranda"
         btnKembali.UseVisualStyleBackColor = True
         ' 
-        ' pnlSidebar
-        ' 
-        pnlSidebar.BackColor = Color.MidnightBlue
-        pnlSidebar.Controls.Add(btnPembayaran)
-        pnlSidebar.Controls.Add(btnAngsuran)
-        pnlSidebar.Controls.Add(btnPinjaman)
-        pnlSidebar.Controls.Add(btnSimpanan)
-        pnlSidebar.Controls.Add(btnAnggota)
-        pnlSidebar.Controls.Add(btnDashboard)
-        pnlSidebar.Controls.Add(lblJudul)
-        pnlSidebar.Dock = DockStyle.Left
-        pnlSidebar.Location = New Point(0, 0)
-        pnlSidebar.Name = "pnlSidebar"
-        pnlSidebar.Size = New Size(278, 603)
-        pnlSidebar.TabIndex = 7
-        ' 
-        ' btnPembayaran
-        ' 
-        btnPembayaran.Cursor = Cursors.Hand
-        btnPembayaran.FlatStyle = FlatStyle.Flat
-        btnPembayaran.ForeColor = Color.White
-        btnPembayaran.Location = New Point(20, 330)
-        btnPembayaran.Name = "btnPembayaran"
-        btnPembayaran.Size = New Size(180, 40)
-        btnPembayaran.TabIndex = 6
-        btnPembayaran.Text = "Pembayaran"
-        btnPembayaran.TextAlign = ContentAlignment.MiddleLeft
-        btnPembayaran.UseVisualStyleBackColor = True
-        ' 
-        ' btnAngsuran
-        ' 
-        btnAngsuran.Cursor = Cursors.Hand
-        btnAngsuran.FlatStyle = FlatStyle.Flat
-        btnAngsuran.ForeColor = Color.White
-        btnAngsuran.Location = New Point(20, 280)
-        btnAngsuran.Name = "btnAngsuran"
-        btnAngsuran.Size = New Size(180, 40)
-        btnAngsuran.TabIndex = 5
-        btnAngsuran.Text = "Angsuran"
-        btnAngsuran.TextAlign = ContentAlignment.MiddleLeft
-        btnAngsuran.UseVisualStyleBackColor = True
-        ' 
-        ' btnPinjaman
-        ' 
-        btnPinjaman.Cursor = Cursors.Hand
-        btnPinjaman.FlatStyle = FlatStyle.Flat
-        btnPinjaman.ForeColor = Color.White
-        btnPinjaman.Location = New Point(20, 230)
-        btnPinjaman.Name = "btnPinjaman"
-        btnPinjaman.Size = New Size(180, 40)
-        btnPinjaman.TabIndex = 4
-        btnPinjaman.Text = "Pinjaman"
-        btnPinjaman.TextAlign = ContentAlignment.MiddleLeft
-        btnPinjaman.UseVisualStyleBackColor = True
-        ' 
-        ' btnSimpanan
-        ' 
-        btnSimpanan.Cursor = Cursors.Hand
-        btnSimpanan.FlatStyle = FlatStyle.Flat
-        btnSimpanan.ForeColor = Color.White
-        btnSimpanan.Location = New Point(20, 180)
-        btnSimpanan.Name = "btnSimpanan"
-        btnSimpanan.Size = New Size(180, 40)
-        btnSimpanan.TabIndex = 3
-        btnSimpanan.Text = "Simpanan"
-        btnSimpanan.TextAlign = ContentAlignment.MiddleLeft
-        btnSimpanan.UseVisualStyleBackColor = True
-        ' 
-        ' btnAnggota
-        ' 
-        btnAnggota.BackColor = Color.RoyalBlue
-        btnAnggota.Cursor = Cursors.Hand
-        btnAnggota.FlatStyle = FlatStyle.Flat
-        btnAnggota.ForeColor = Color.White
-        btnAnggota.Location = New Point(20, 130)
-        btnAnggota.Name = "btnAnggota"
-        btnAnggota.Size = New Size(180, 40)
-        btnAnggota.TabIndex = 2
-        btnAnggota.Text = "Data Anggota"
-        btnAnggota.TextAlign = ContentAlignment.MiddleLeft
-        btnAnggota.UseVisualStyleBackColor = False
-        ' 
-        ' btnDashboard
-        ' 
-        btnDashboard.BackColor = Color.MidnightBlue
-        btnDashboard.Cursor = Cursors.Hand
-        btnDashboard.FlatStyle = FlatStyle.Flat
-        btnDashboard.ForeColor = Color.White
-        btnDashboard.Location = New Point(20, 80)
-        btnDashboard.Name = "btnDashboard"
-        btnDashboard.Size = New Size(180, 40)
-        btnDashboard.TabIndex = 1
-        btnDashboard.Text = "Dashboard"
-        btnDashboard.TextAlign = ContentAlignment.MiddleLeft
-        btnDashboard.UseVisualStyleBackColor = False
-        ' 
-        ' lblJudul
-        ' 
-        lblJudul.AutoSize = True
-        lblJudul.Font = New Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblJudul.ForeColor = Color.White
-        lblJudul.Location = New Point(3, 23)
-        lblJudul.Name = "lblJudul"
-        lblJudul.Size = New Size(243, 31)
-        lblJudul.TabIndex = 0
-        lblJudul.Text = "KSP SIMPAN PINJAM"
-        ' 
-        ' FormAnggota
+        ' Form2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = Color.WhiteSmoke
-        ClientSize = New Size(1082, 603)
-        Controls.Add(pnlSidebar)
-        Controls.Add(btnKembali)
-        Controls.Add(btnRefresh)
-        Controls.Add(btnHapus)
-        Controls.Add(btnUbah)
-        Controls.Add(btnTambah)
+        BackColor = SystemColors.ControlLightLight
+        ClientSize = New Size(982, 603)
+        Controls.Add(Panel3)
         Controls.Add(dgvAnggota)
-        Controls.Add(lblJudulAnggota)
-        Name = "FormAnggota"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "Data Anggota Koperasi"
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
+        Name = "Form2"
+        Text = "Form Anggota"
+        Panel1.ResumeLayout(False)
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
         CType(dgvAnggota, ComponentModel.ISupportInitialize).EndInit()
-        pnlSidebar.ResumeLayout(False)
-        pnlSidebar.PerformLayout()
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
-    Friend WithEvents lblJudulAnggota As Label
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents btnTambahTop As Button
+    Friend WithEvents btnCari As Button
+    Friend WithEvents cmbFilter As ComboBox
+    Friend WithEvents lblFilter As Label
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents btnExport As Button
+    Friend WithEvents btnCetakTop As Button
     Friend WithEvents dgvAnggota As DataGridView
-    Friend WithEvents btnTambah As Button
-    Friend WithEvents btnUbah As Button
-    Friend WithEvents btnHapus As Button
-    Friend WithEvents btnRefresh As Button
+    Friend WithEvents colFoto As DataGridViewTextBoxColumn
+    Friend WithEvents colID As DataGridViewTextBoxColumn
+    Friend WithEvents colNama As DataGridViewTextBoxColumn
+    Friend WithEvents colAlamat As DataGridViewTextBoxColumn
+    Friend WithEvents colStatus As DataGridViewTextBoxColumn
+    Friend WithEvents Panel3 As Panel
     Friend WithEvents btnKembali As Button
-    Friend WithEvents pnlSidebar As Panel
-    Friend WithEvents btnPembayaran As Button
-    Friend WithEvents btnAngsuran As Button
-    Friend WithEvents btnPinjaman As Button
-    Friend WithEvents btnSimpanan As Button
-    Friend WithEvents btnAnggota As Button
-    Friend WithEvents btnDashboard As Button
-    Friend WithEvents lblJudul As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

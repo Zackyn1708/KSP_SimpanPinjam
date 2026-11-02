@@ -18,4 +18,8 @@
     Private Sub FormPembayaranAngsuran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub btnsubmit_Click(sender As Object, e As EventArgs) Handles btnsubmit.Click
+
+    End Sub
 End Class
