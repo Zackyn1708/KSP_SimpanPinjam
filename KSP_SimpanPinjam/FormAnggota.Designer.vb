@@ -22,7 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Label1 = New Label()
         Panel2 = New Panel()
@@ -40,9 +40,9 @@ Partial Class Form2
         colAlamat = New DataGridViewTextBoxColumn()
         colStatus = New DataGridViewTextBoxColumn()
         Panel3 = New Panel()
+        btnKembali = New Button()
         Button1 = New Button()
         Button2 = New Button()
-        btnKembali = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(dgvAnggota, ComponentModel.ISupportInitialize).BeginInit()
@@ -128,6 +128,7 @@ Partial Class Form2
         ' 
         cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList
         cmbFilter.FormattingEnabled = True
+        cmbFilter.Items.AddRange(New Object() {"Aktif", "Pasif"})
         cmbFilter.Location = New Point(384, 17)
         cmbFilter.Name = "cmbFilter"
         cmbFilter.Size = New Size(150, 28)
@@ -144,10 +145,12 @@ Partial Class Form2
         ' 
         ' txtSearch
         ' 
-        txtSearch.Location = New Point(12, 16)
+        txtSearch.ForeColor = SystemColors.ScrollBar
+        txtSearch.Location = New Point(20, 18)
         txtSearch.Name = "txtSearch"
         txtSearch.Size = New Size(300, 27)
         txtSearch.TabIndex = 0
+        txtSearch.Text = "Search..."
         ' 
         ' dgvAnggota
         ' 
@@ -157,14 +160,14 @@ Partial Class Form2
         dgvAnggota.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvAnggota.BackgroundColor = Color.White
         dgvAnggota.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.Gainsboro
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 11F)
-        DataGridViewCellStyle2.ForeColor = Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(8), CByte(120), CByte(201))
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvAnggota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = Color.Gainsboro
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 11F)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(8), CByte(120), CByte(201))
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvAnggota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvAnggota.ColumnHeadersHeight = 45
         dgvAnggota.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         dgvAnggota.Columns.AddRange(New DataGridViewColumn() {colFoto, colID, colNama, colAlamat, colStatus})
@@ -228,6 +231,16 @@ Partial Class Form2
         Panel3.Size = New Size(982, 75)
         Panel3.TabIndex = 3
         ' 
+        ' btnKembali
+        ' 
+        btnKembali.AutoSize = True
+        btnKembali.Location = New Point(22, 16)
+        btnKembali.Name = "btnKembali"
+        btnKembali.Size = New Size(152, 30)
+        btnKembali.TabIndex = 9
+        btnKembali.Text = "Kembali ke Beranda"
+        btnKembali.UseVisualStyleBackColor = True
+        ' 
         ' Button1
         ' 
         Button1.Location = New Point(876, 16)
@@ -245,16 +258,6 @@ Partial Class Form2
         Button2.TabIndex = 7
         Button2.Text = "Tambah"
         Button2.UseVisualStyleBackColor = True
-        ' 
-        ' btnKembali
-        ' 
-        btnKembali.AutoSize = True
-        btnKembali.Location = New Point(22, 16)
-        btnKembali.Name = "btnKembali"
-        btnKembali.Size = New Size(152, 30)
-        btnKembali.TabIndex = 9
-        btnKembali.Text = "Kembali ke Beranda"
-        btnKembali.UseVisualStyleBackColor = True
         ' 
         ' Form2
         ' 
