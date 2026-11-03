@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormPembayaranAngsuran
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class FormPembayaranAngsuran
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Label1 = New Label()
         Label2 = New Label()
         GroupBox1 = New GroupBox()
@@ -48,6 +48,7 @@ Partial Class FormPembayaranAngsuran
         BackgroundWorker1 = New ComponentModel.BackgroundWorker()
         Label8 = New Label()
         btnsubmit = New Button()
+        Button1 = New Button()
         GroupBox1.SuspendLayout()
         CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -56,7 +57,7 @@ Partial Class FormPembayaranAngsuran
         ' 
         Label1.BackColor = Color.Teal
         Label1.Dock = DockStyle.Top
-        Label1.Font = New Font("Cooper Black", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Cooper Black", 24.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(0, 0)
         Label1.Name = "Label1"
@@ -90,7 +91,7 @@ Partial Class FormPembayaranAngsuran
         GroupBox1.Controls.Add(TipeBunga)
         GroupBox1.Controls.Add(TipePokok)
         GroupBox1.Controls.Add(Label4)
-        GroupBox1.Font = New Font("Segoe UI", 10F)
+        GroupBox1.Font = New Font("Segoe UI", 10.0F)
         GroupBox1.Location = New Point(14, 185)
         GroupBox1.Name = "GroupBox1"
         GroupBox1.Size = New Size(1211, 216)
@@ -100,7 +101,6 @@ Partial Class FormPembayaranAngsuran
         ' 
         ' DateTimePicker1
         ' 
-        DateTimePicker1.Checked = False
         DateTimePicker1.Format = DateTimePickerFormat.Short
         DateTimePicker1.Location = New Point(163, 163)
         DateTimePicker1.Name = "DateTimePicker1"
@@ -238,9 +238,9 @@ Partial Class FormPembayaranAngsuran
         DataGridView1.Name = "DataGridView1"
         DataGridView1.ReadOnly = True
         DataGridView1.RowHeadersWidth = 31
-        DataGridViewCellStyle3.SelectionBackColor = Color.RoyalBlue
-        DataGridViewCellStyle3.SelectionForeColor = Color.White
-        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle2.SelectionBackColor = Color.RoyalBlue
+        DataGridViewCellStyle2.SelectionForeColor = Color.White
+        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle2
         DataGridView1.ScrollBars = ScrollBars.Vertical
         DataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         DataGridView1.Size = New Size(1076, 216)
@@ -301,7 +301,7 @@ Partial Class FormPembayaranAngsuran
         btnsubmit.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
         btnsubmit.BackColor = Color.Teal
         btnsubmit.FlatStyle = FlatStyle.Flat
-        btnsubmit.Font = New Font("Cooper Black", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnsubmit.Font = New Font("Cooper Black", 12.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         btnsubmit.ForeColor = Color.White
         btnsubmit.Location = New Point(1055, 740)
         btnsubmit.Name = "btnsubmit"
@@ -310,12 +310,28 @@ Partial Class FormPembayaranAngsuran
         btnsubmit.Text = "Submit"
         btnsubmit.UseVisualStyleBackColor = False
         ' 
+        ' Button1
+        ' 
+        Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Right
+        Button1.AutoSize = True
+        Button1.BackColor = Color.Teal
+        Button1.FlatStyle = FlatStyle.Flat
+        Button1.Font = New Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Button1.ForeColor = Color.White
+        Button1.Location = New Point(14, 642)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(184, 55)
+        Button1.TabIndex = 9
+        Button1.Text = "Kembali Ke Beranda"
+        Button1.UseVisualStyleBackColor = False
+        ' 
         ' FormPembayaranAngsuran
         ' 
-        AutoScaleDimensions = New SizeF(9F, 23F)
+        AutoScaleDimensions = New SizeF(9.0F, 23.0F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.AliceBlue
-        ClientSize = New Size(1237, 801)
+        ClientSize = New Size(1102, 703)
+        Controls.Add(Button1)
         Controls.Add(btnsubmit)
         Controls.Add(Label8)
         Controls.Add(DataGridView1)
@@ -324,7 +340,7 @@ Partial Class FormPembayaranAngsuran
         Controls.Add(GroupBox1)
         Controls.Add(Label2)
         Controls.Add(Label1)
-        Font = New Font("Segoe UI", 10F)
+        Font = New Font("Segoe UI", 10.0F)
         Name = "FormPembayaranAngsuran"
         StartPosition = FormStartPosition.CenterScreen
         Text = "PembayaranAngsuran"
@@ -360,4 +376,5 @@ Partial Class FormPembayaranAngsuran
     Friend WithEvents KontrakJT As DataGridViewTextBoxColumn
     Friend WithEvents KontrakAnggota As DataGridViewTextBoxColumn
     Friend WithEvents btnsubmit As Button
+    Friend WithEvents Button1 As Button
 End Class
