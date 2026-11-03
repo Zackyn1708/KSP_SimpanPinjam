@@ -41,7 +41,7 @@ Partial Class FormLogin
         lbljudul.Font = New Font("Cooper Black", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         lbljudul.ForeColor = SystemColors.Highlight
         lbljudul.LiveSetting = Automation.AutomationLiveSetting.Assertive
-        lbljudul.Location = New Point(187, 43)
+        lbljudul.Location = New Point(172, 44)
         lbljudul.Name = "lbljudul"
         lbljudul.Size = New Size(444, 39)
         lbljudul.TabIndex = 0

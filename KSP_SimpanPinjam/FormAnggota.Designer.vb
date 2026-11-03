@@ -22,7 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Label1 = New Label()
         Panel2 = New Panel()
@@ -40,9 +40,9 @@ Partial Class Form2
         colAlamat = New DataGridViewTextBoxColumn()
         colStatus = New DataGridViewTextBoxColumn()
         Panel3 = New Panel()
+        btnKembali = New Button()
         Button1 = New Button()
         Button2 = New Button()
-        btnKembali = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(dgvAnggota, ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +62,7 @@ Partial Class Form2
         ' Label1
         ' 
         Label1.Dock = DockStyle.Fill
-        Label1.Font = New Font("Microsoft Sans Serif", 24F, FontStyle.Bold)
+        Label1.Font = New Font("Cooper Black", 24F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(0, 0)
         Label1.Name = "Label1"
@@ -157,14 +157,14 @@ Partial Class Form2
         dgvAnggota.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
         dgvAnggota.BackgroundColor = Color.White
         dgvAnggota.BorderStyle = BorderStyle.Fixed3D
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = Color.Gainsboro
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 11F)
-        DataGridViewCellStyle2.ForeColor = Color.Black
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(8), CByte(120), CByte(201))
-        DataGridViewCellStyle2.SelectionForeColor = Color.White
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
-        dgvAnggota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = Color.Gainsboro
+        DataGridViewCellStyle1.Font = New Font("Segoe UI", 11F)
+        DataGridViewCellStyle1.ForeColor = Color.Black
+        DataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(CByte(8), CByte(120), CByte(201))
+        DataGridViewCellStyle1.SelectionForeColor = Color.White
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dgvAnggota.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         dgvAnggota.ColumnHeadersHeight = 45
         dgvAnggota.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         dgvAnggota.Columns.AddRange(New DataGridViewColumn() {colFoto, colID, colNama, colAlamat, colStatus})
@@ -228,6 +228,16 @@ Partial Class Form2
         Panel3.Size = New Size(982, 75)
         Panel3.TabIndex = 3
         ' 
+        ' btnKembali
+        ' 
+        btnKembali.AutoSize = True
+        btnKembali.Location = New Point(22, 16)
+        btnKembali.Name = "btnKembali"
+        btnKembali.Size = New Size(152, 30)
+        btnKembali.TabIndex = 9
+        btnKembali.Text = "Kembali ke Beranda"
+        btnKembali.UseVisualStyleBackColor = True
+        ' 
         ' Button1
         ' 
         Button1.Location = New Point(876, 16)
@@ -245,16 +255,6 @@ Partial Class Form2
         Button2.TabIndex = 7
         Button2.Text = "Tambah"
         Button2.UseVisualStyleBackColor = True
-        ' 
-        ' btnKembali
-        ' 
-        btnKembali.AutoSize = True
-        btnKembali.Location = New Point(22, 16)
-        btnKembali.Name = "btnKembali"
-        btnKembali.Size = New Size(152, 30)
-        btnKembali.TabIndex = 9
-        btnKembali.Text = "Kembali ke Beranda"
-        btnKembali.UseVisualStyleBackColor = True
         ' 
         ' Form2
         ' 

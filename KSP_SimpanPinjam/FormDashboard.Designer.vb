@@ -23,12 +23,12 @@ Partial Class FormDashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormDashboard))
-        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
-        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New DataVisualization.Charting.Series()
         PanelSidebar = New Panel()
         btnLaporan = New Button()
         btnTransaksi = New Button()
@@ -38,6 +38,8 @@ Partial Class FormDashboard
         btnDashboard = New Button()
         PictureBox1 = New PictureBox()
         Panel1 = New Panel()
+        Label12 = New Label()
+        Label11 = New Label()
         FlowLayoutPanel3 = New FlowLayoutPanel()
         Label2 = New Label()
         Label1 = New Label()
@@ -47,21 +49,21 @@ Partial Class FormDashboard
         FlowLayoutPanel2 = New FlowLayoutPanel()
         FlowLayoutPanel4 = New FlowLayoutPanel()
         Panel2 = New Panel()
+        lblAngkaAnggota = New Label()
         Label8 = New Label()
         Label4 = New Label()
         Panel3 = New Panel()
+        lblAngkaSimpanan = New Label()
         Label5 = New Label()
         Panel4 = New Panel()
-        Label6 = New Label()
-        lblAngkaAnggota = New Label()
-        lblAngkaSimpanan = New Label()
         lblAngkaPinjaman = New Label()
+        Label6 = New Label()
         Panel5 = New Panel()
-        Panel6 = New Panel()
-        Chart1 = New DataVisualization.Charting.Chart()
-        Label7 = New Label()
-        Chart2 = New DataVisualization.Charting.Chart()
         Label9 = New Label()
+        Chart2 = New DataVisualization.Charting.Chart()
+        Panel6 = New Panel()
+        Label7 = New Label()
+        Chart1 = New DataVisualization.Charting.Chart()
         PanelSidebar.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Panel1.SuspendLayout()
@@ -70,9 +72,9 @@ Partial Class FormDashboard
         Panel3.SuspendLayout()
         Panel4.SuspendLayout()
         Panel5.SuspendLayout()
+        CType(Chart2, ComponentModel.ISupportInitialize).BeginInit()
         Panel6.SuspendLayout()
         CType(Chart1, ComponentModel.ISupportInitialize).BeginInit()
-        CType(Chart2, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' PanelSidebar
@@ -193,6 +195,8 @@ Partial Class FormDashboard
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(18), CByte(125), CByte(135))
+        Panel1.Controls.Add(Label12)
+        Panel1.Controls.Add(Label11)
         Panel1.Controls.Add(FlowLayoutPanel3)
         Panel1.Controls.Add(Label2)
         Panel1.Controls.Add(Label1)
@@ -202,6 +206,27 @@ Partial Class FormDashboard
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(927, 171)
         Panel1.TabIndex = 1
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label12.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label12.Location = New Point(802, 21)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(102, 20)
+        Label12.TabIndex = 11
+        Label12.Text = "Petugas 07"
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label11.Location = New Point(697, 21)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(99, 20)
+        Label11.TabIndex = 10
+        Label11.Text = "Pengguna:"
         ' 
         ' FlowLayoutPanel3
         ' 
@@ -224,7 +249,7 @@ Partial Class FormDashboard
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Cooper Black", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("Cooper Black", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = Color.White
         Label1.Location = New Point(16, 85)
         Label1.Name = "Label1"
@@ -236,7 +261,7 @@ Partial Class FormDashboard
         ' 
         Button1.FlatAppearance.BorderSize = 0
         Button1.FlatStyle = FlatStyle.Flat
-        Button1.Font = New Font("Cooper Black", 48.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Button1.Font = New Font("Cooper Black", 48F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Button1.ForeColor = Color.White
         Button1.Location = New Point(-13, -12)
         Button1.Name = "Button1"
@@ -293,6 +318,17 @@ Partial Class FormDashboard
         Panel2.Size = New Size(267, 138)
         Panel2.TabIndex = 4
         ' 
+        ' lblAngkaAnggota
+        ' 
+        lblAngkaAnggota.AutoSize = True
+        lblAngkaAnggota.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        lblAngkaAnggota.ForeColor = Color.DarkGoldenrod
+        lblAngkaAnggota.Location = New Point(22, 64)
+        lblAngkaAnggota.Name = "lblAngkaAnggota"
+        lblAngkaAnggota.Size = New Size(40, 46)
+        lblAngkaAnggota.TabIndex = 2
+        lblAngkaAnggota.Text = "4"
+        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -324,6 +360,17 @@ Partial Class FormDashboard
         Panel3.Size = New Size(267, 138)
         Panel3.TabIndex = 5
         ' 
+        ' lblAngkaSimpanan
+        ' 
+        lblAngkaSimpanan.AutoSize = True
+        lblAngkaSimpanan.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        lblAngkaSimpanan.ForeColor = Color.DarkGoldenrod
+        lblAngkaSimpanan.Location = New Point(10, 72)
+        lblAngkaSimpanan.Name = "lblAngkaSimpanan"
+        lblAngkaSimpanan.Size = New Size(210, 46)
+        lblAngkaSimpanan.TabIndex = 3
+        lblAngkaSimpanan.Text = "Rp. 400.000"
+        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -345,6 +392,17 @@ Partial Class FormDashboard
         Panel4.Size = New Size(267, 138)
         Panel4.TabIndex = 5
         ' 
+        ' lblAngkaPinjaman
+        ' 
+        lblAngkaPinjaman.AutoSize = True
+        lblAngkaPinjaman.Font = New Font("Segoe UI", 20F, FontStyle.Bold)
+        lblAngkaPinjaman.ForeColor = Color.DarkGoldenrod
+        lblAngkaPinjaman.Location = New Point(27, 71)
+        lblAngkaPinjaman.Name = "lblAngkaPinjaman"
+        lblAngkaPinjaman.Size = New Size(101, 46)
+        lblAngkaPinjaman.TabIndex = 4
+        lblAngkaPinjaman.Text = "Rp. 0"
+        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -357,39 +415,6 @@ Partial Class FormDashboard
         Label6.Text = "Total Pinjaman"
         Label6.TextAlign = ContentAlignment.TopCenter
         ' 
-        ' lblAngkaAnggota
-        ' 
-        lblAngkaAnggota.AutoSize = True
-        lblAngkaAnggota.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
-        lblAngkaAnggota.ForeColor = Color.DarkGoldenrod
-        lblAngkaAnggota.Location = New Point(22, 64)
-        lblAngkaAnggota.Name = "lblAngkaAnggota"
-        lblAngkaAnggota.Size = New Size(40, 46)
-        lblAngkaAnggota.TabIndex = 2
-        lblAngkaAnggota.Text = "4"
-        ' 
-        ' lblAngkaSimpanan
-        ' 
-        lblAngkaSimpanan.AutoSize = True
-        lblAngkaSimpanan.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
-        lblAngkaSimpanan.ForeColor = Color.DarkGoldenrod
-        lblAngkaSimpanan.Location = New Point(10, 72)
-        lblAngkaSimpanan.Name = "lblAngkaSimpanan"
-        lblAngkaSimpanan.Size = New Size(210, 46)
-        lblAngkaSimpanan.TabIndex = 3
-        lblAngkaSimpanan.Text = "Rp. 400.000"
-        ' 
-        ' lblAngkaPinjaman
-        ' 
-        lblAngkaPinjaman.AutoSize = True
-        lblAngkaPinjaman.Font = New Font("Segoe UI", 20.0F, FontStyle.Bold)
-        lblAngkaPinjaman.ForeColor = Color.DarkGoldenrod
-        lblAngkaPinjaman.Location = New Point(27, 71)
-        lblAngkaPinjaman.Name = "lblAngkaPinjaman"
-        lblAngkaPinjaman.Size = New Size(101, 46)
-        lblAngkaPinjaman.TabIndex = 4
-        lblAngkaPinjaman.Text = "Rp. 0"
-        ' 
         ' Panel5
         ' 
         Panel5.BackColor = Color.White
@@ -400,6 +425,34 @@ Partial Class FormDashboard
         Panel5.Size = New Size(399, 265)
         Panel5.TabIndex = 5
         ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label9.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        Label9.Location = New Point(35, 15)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(224, 20)
+        Label9.TabIndex = 5
+        Label9.Text = "Total Pinjaman Bulan Ini"
+        ' 
+        ' Chart2
+        ' 
+        Chart2.BorderlineDashStyle = DataVisualization.Charting.ChartDashStyle.Solid
+        ChartArea3.Name = "ChartArea1"
+        Chart2.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Chart2.Legends.Add(Legend3)
+        Chart2.Location = New Point(3, 58)
+        Chart2.Name = "Chart2"
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Chart2.Series.Add(Series3)
+        Chart2.Size = New Size(393, 199)
+        Chart2.TabIndex = 1
+        Chart2.Text = "Pemasukan Bulan Ini"
+        ' 
         ' Panel6
         ' 
         Panel6.BackColor = Color.White
@@ -409,24 +462,6 @@ Partial Class FormDashboard
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(404, 265)
         Panel6.TabIndex = 6
-        ' 
-        ' Chart1
-        ' 
-        Chart1.BorderlineDashStyle = DataVisualization.Charting.ChartDashStyle.Solid
-        ChartArea2.Name = "ChartArea1"
-        Chart1.ChartAreas.Add(ChartArea2)
-        Legend2.Name = "Legend1"
-        Chart1.Legends.Add(Legend2)
-        Chart1.Location = New Point(65, 12)
-        Chart1.Name = "Chart1"
-        Series2.ChartArea = "ChartArea1"
-        Series2.ChartType = DataVisualization.Charting.SeriesChartType.Pie
-        Series2.Legend = "Legend1"
-        Series2.Name = "Series1"
-        Chart1.Series.Add(Series2)
-        Chart1.Size = New Size(284, 250)
-        Chart1.TabIndex = 0
-        Chart1.Text = "Pemasukan Bulan Ini"
         ' 
         ' Label7
         ' 
@@ -439,37 +474,27 @@ Partial Class FormDashboard
         Label7.TabIndex = 4
         Label7.Text = "Pemasukan Bulan Ini"
         ' 
-        ' Chart2
+        ' Chart1
         ' 
-        Chart2.BorderlineDashStyle = DataVisualization.Charting.ChartDashStyle.Solid
-        ChartArea1.Name = "ChartArea1"
-        Chart2.ChartAreas.Add(ChartArea1)
-        Legend1.Name = "Legend1"
-        Chart2.Legends.Add(Legend1)
-        Chart2.Location = New Point(3, 58)
-        Chart2.Name = "Chart2"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Legend = "Legend1"
-        Series1.Name = "Series1"
-        Chart2.Series.Add(Series1)
-        Chart2.Size = New Size(393, 199)
-        Chart2.TabIndex = 1
-        Chart2.Text = "Pemasukan Bulan Ini"
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Cooper Black", 10.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        Label9.Location = New Point(35, 15)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(141, 20)
-        Label9.TabIndex = 5
-        Label9.Text = "Total Pinjaman"
+        Chart1.BorderlineDashStyle = DataVisualization.Charting.ChartDashStyle.Solid
+        ChartArea4.Name = "ChartArea1"
+        Chart1.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Chart1.Legends.Add(Legend4)
+        Chart1.Location = New Point(65, 12)
+        Chart1.Name = "Chart1"
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = DataVisualization.Charting.SeriesChartType.Pie
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Chart1.Series.Add(Series4)
+        Chart1.Size = New Size(284, 250)
+        Chart1.TabIndex = 0
+        Chart1.Text = "Pemasukan Bulan Ini"
         ' 
         ' FormDashboard
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 21.0F)
+        AutoScaleDimensions = New SizeF(10F, 21F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.FromArgb(CByte(240), CByte(244), CByte(248))
         ClientSize = New Size(1182, 653)
@@ -505,10 +530,10 @@ Partial Class FormDashboard
         Panel4.PerformLayout()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
+        CType(Chart2, ComponentModel.ISupportInitialize).EndInit()
         Panel6.ResumeLayout(False)
         Panel6.PerformLayout()
         CType(Chart1, ComponentModel.ISupportInitialize).EndInit()
-        CType(Chart2, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
     End Sub
 
@@ -547,4 +572,6 @@ Partial Class FormDashboard
     Friend WithEvents Chart1 As DataVisualization.Charting.Chart
     Friend WithEvents Chart2 As DataVisualization.Charting.Chart
     Friend WithEvents Label9 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
 End Class
