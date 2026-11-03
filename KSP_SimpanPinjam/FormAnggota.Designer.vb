@@ -128,6 +128,7 @@ Partial Class Form2
         ' 
         cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList
         cmbFilter.FormattingEnabled = True
+        cmbFilter.Items.AddRange(New Object() {"Aktif", "Pasif"})
         cmbFilter.Location = New Point(384, 17)
         cmbFilter.Name = "cmbFilter"
         cmbFilter.Size = New Size(150, 28)
@@ -144,10 +145,12 @@ Partial Class Form2
         ' 
         ' txtSearch
         ' 
-        txtSearch.Location = New Point(12, 16)
+        txtSearch.ForeColor = SystemColors.ScrollBar
+        txtSearch.Location = New Point(20, 18)
         txtSearch.Name = "txtSearch"
         txtSearch.Size = New Size(300, 27)
         txtSearch.TabIndex = 0
+        txtSearch.Text = "Search..."
         ' 
         ' dgvAnggota
         ' 
